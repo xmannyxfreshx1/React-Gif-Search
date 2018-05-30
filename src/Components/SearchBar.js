@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import {Navbar} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
+import {FormGroup} from 'react-bootstrap';
+import {FormControl} from 'react-bootstrap';
 
 class SearchBar extends Component{
     constructor(props){
@@ -25,8 +29,23 @@ class SearchBar extends Component{
 
     render(){
         return(<div>
-            <input type ="text" onChange={this.onChange}/>
-            <button onClick={this.onSearch}>SEARCH</button>
+            <Navbar inverse collapseOnSelect>
+                <Navbar.Header className="App-header">
+                    <Navbar.Brand>
+                        <a href="#home">React Gif Engine</a>
+                        {/*<img src={logo} className="App-logo" alt="logo" />*/}
+                        {/*<h1 className="App-title">React Gif Engine</h1>*/}
+                    </Navbar.Brand>
+                </Navbar.Header>
+                <Navbar.Form pullLeft>
+                    <FormGroup>
+                        <FormControl type="text" onChange={this.onChange} placeholder="Search" />
+                    </FormGroup>{' '}
+                    <Button onClick={this.onSearch}>Submit</Button>
+                </Navbar.Form>
+            </Navbar>
+            {/*<input type ="text" onChange={this.onChange}/>*/}
+            {/*<button onClick={this.onSearch}>SEARCH</button>*/}
         </div>);
     }
 
