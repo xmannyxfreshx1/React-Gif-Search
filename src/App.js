@@ -53,7 +53,7 @@ class App extends Component {
             isLoading:true,
             gifs:[]
         });
-        fetch(`http://api.giphy.com/v1/gifs/search?q=${searchTerm}&api_key=Uf79tU9Kkwmo04uGjSj0sv76kyJVeBqv&limit=10`)
+        fetch(`https://api.giphy.com/v1/gifs/search?q=${searchTerm}&api_key=Uf79tU9Kkwmo04uGjSj0sv76kyJVeBqv&limit=10`)
             .then(res => res.json())
             .then(
                 (result)=>{
