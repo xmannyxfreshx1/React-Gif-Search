@@ -41,7 +41,7 @@ class SearchBar extends Component{
                     <FormGroup>
                         <FormControl type="text" onChange={this.onChange} placeholder="Search" />
                     </FormGroup>{' '}
-                    <Button onClick={this.onSearch}>Submit</Button>
+                    <Button bsStyle="danger" onClick={this.onSearch}>Submit</Button>
                 </Navbar.Form>
             </Navbar>
             {/*<input type ="text" onChange={this.onChange}/>*/}
